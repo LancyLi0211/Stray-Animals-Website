@@ -1,5 +1,9 @@
-# 546_Final_Project
-This is Sit CS546 team project repo
+# Stray-Animals-Website
+This is SIT CS546 team project repo.
+**Since the previous CS546 library is locked, a new repo is created to update further changes.**
+## News
+Updated UI for animal posts and volunteer posts.Fixed database storage error.
+04/19/2024 by Chunzhi Li
 
 ## Instruction
 {Project Name: Stray Animal Information Application}
