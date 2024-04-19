@@ -1,0 +1,32 @@
+<main class="container px-4 text-center">
+    <div class="container">
+        <p class="px-1 text-muted">Did you know that there are 70 million stray animals in the United States?</p>
+        <p class="px-1 text-muted">Of the massive population in shelters, just 3–4 million stray animals get adopted.
+        </p>
+        <h1>Welcome Back</h1>
+    </div>
+    <div class="container row">
+        <div class="col-4"></div>
+        <form class="container col-12 col-md-4" id="loginForm" action="/user/login" method="POST">
+            <div class="mb-3">
+                <label for="inputAccount" class="form-label">Account</label>
+                <input type="text" class="form-control" id="inputAccount" name="account">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPassword">
+            </div>
+            <div class="mb-3">
+                <ul class="errorInfo">
+                    {{#if error}}
+                    <li>{{error}}</li>
+                    {{/if}}
+                </ul>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <a href="/user/signin">Not our user yet?</a>
+        </form>
+        <div class="col-4"></div>
+    </div>
+    <script src="../public/js/loginValidation.js"></script>
+</main>

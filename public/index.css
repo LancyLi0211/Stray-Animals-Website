@@ -1,0 +1,77 @@
+nav {
+    box-shadow: 0px 2px 5px rgb(78, 78, 78);
+}
+
+.navbar {
+    background-color: #91b5a9;
+}
+
+.nav-link {
+    color: #1b2622 !important;
+}
+
+main {
+    margin-top: 5rem;
+}
+
+.userCenterInfo {
+    height: 550px;
+    border: 1px solid rgb(187, 186, 186);
+    border-radius: 15px;
+}
+
+.card {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.cardImage {
+    object-fit: cover;
+    height: 12rem;
+
+}
+
+
+.card:hover {
+    box-shadow: 5px 5px 5px rgb(157, 156, 156);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.errorInfo {
+    color: red;
+}
+
+.testimonial-group>.row {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.testimonial-group>.row>.col-4 {
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.alertPage {
+    height: 80rem;
+}
+
+.comment-text {
+    font-size: large;
+    font-weight: 600;
+}
+
+.comment-info {
+    font-size: small;
+}

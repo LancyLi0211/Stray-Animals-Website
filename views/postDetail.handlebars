@@ -1,0 +1,137 @@
+<main class="container">
+    {{#if post}}
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                {{!-- <div class="col-12 col-sm-3"></div> --}}
+                <!--img slide-->
+                <div id="carouselExampleControls" class="carousel slide col" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src={{post.animal_photo}} class="d-block w-100" alt="{{post.species}}"
+                                style="object-fit: cover;height: 500px; width:500px">
+                        </div>
+                        {{!-- <div class="carousel-item">
+                            <img src={{post.animal_photo}} class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src={{post.animal_photo}} class="d-block w-100" alt="...">
+                        </div> --}}
+                    </div>
+                    {{!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> --}}
+                </div>
+            </div>
+            <div class="col-6">
+
+                <div class="col" id="map" style="object-fit: cover;height: 500px; width:500px"></div>
+
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-12 col-lg-6">
+
+                <p>Update Time: {{post.find_time}}</p>
+                <hr>
+                <p>Animal Name: {{post.animal_name}}</p>
+                <hr>
+                <p>Species: {{post.species}}</p>
+                <hr>
+                <p>Health Condition: {{post.health_condition}}</p>
+                <hr>
+                <p>Description: {{post.description}}</p>
+                <hr>
+                <p>Location: {{post.location}} </p>
+                <hr>
+
+                {{#if follow}}
+                <form action={{unfollow_url}} method="POST" id="unfollowForm">
+                    <button type="submit" class="col-12 mb-3 btn btn-primary">Remove from My Follow List</button>
+                </form>
+                {{else}}
+                <form action={{follow_url}} method="POST" id="followForm">
+                    <button type="submit" class="col-12 mb-3 btn btn-primary">Add to My Follow List</button>
+                </form>
+                {{/if}}
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <form action={{animal_id}} method="POST" class="col-12 col-lg-6" id="commentForm">
+                    <div class="mb-3 container text-center">
+                        <label for="newComment" class="form-label mb-3">Want to say something?</label>
+                        <textarea class="form-control mb-3" id="newComment" name="newComment" rows="3"></textarea>
+                        <ul class="errorInfo"></ul>
+                        <button type="submit" class="btn btn-primary mb-3" id="submitComment">Add Comment</button>
+                    </div>
+                </form>
+                <div class="col-3"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <p class="ccol-12 col-lg-6">Comments: </p>
+                    <div class="col-3"></div>
+                </div>
+                <div class="row">
+
+                    <div class="col-3"></div>
+                    <div class="col-12 col-lg-6">
+
+                        {{#if comments}}
+                        {{#each comments}}
+                        <div class="row">
+                            <hr>
+                            <p>{{username}}</p>
+                            <p>{{text}}</p>
+                            <p>{{time}}</p>
+                        </div>
+                        {{/each}}
+                        {{else}}
+                        <p class="row">No Comment Yet</p>
+                        {{/if}}
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    {{else}}
+    <!--incase there is no valid data pass into this page-->
+    <p>No Detail Infomation</p>
+
+    {{/if}}
+    <a href="/animal" class="col-4">Go Back</a>
+    <script src="../public/js/addCommentValidation.js"></script>
+
+    {{!-- map single location --}}
+    <script>
+        var lat = "{{ post.locationinfo.addressInfo.latitude }}";
+        var log = "{{ post.locationinfo.addressInfo.longitude }}";
+        var singleLo = [lat, log];
+        var address = "{{post.location}}";
+        var name = "{{post.animal_name}}";
+        var species = "{{post.species}}";
+    </script>
+    <script src="../public/js/map/singlelocation.js"></script>
+    <script>
+        singleLocation(singleLo, name, species, address);
+    </script>
+</main>

@@ -1,0 +1,29 @@
+<main class="container px-4 text-center">
+    {{#if postData}}
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"> <!-- Sets up rows and columns with gutters -->
+        {{#each postData}}
+        <div class="col"> <!-- Each card is a column that will stack from left to right -->
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h1 class="card-title">{{volunteer_name}}</h1>
+                    <hr>
+                    <ul class="list-group list-group-flush flex-grow-1">
+                        <li class="list-group-item">Location: {{volunteer_location}}</li>
+                        <li class="list-group-item">Contact: {{volunteer_contact}}</li>
+                        <li class="list-group-item">Type: {{volunteer_type}}</li>
+                        <li class="list-group-item flex-grow-1">Volunteer: {{volunteer_description}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    <hr>
+    <div class="container text-center">
+        <h2>Fun Fact</h2>
+        <p id="catFact"></p>
+    </div>
+    <hr>
+    <script src="../public/js/getRandomFact.js"></script>
+</main>
