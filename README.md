@@ -8,6 +8,10 @@ Updated UI for animal posts and volunteer posts.Fixed database storage error.
 ## Instruction
 {Project Name: Stray Animal Information Application}
 
+## Images
+![image](https://github.com/LancyLi0211/Stray-Animals-Website/assets/77958415/f19a0e3c-29e9-432c-8b3b-028ecaab00fd)
+
+
 ### Group members：
 
 - Youlin Chen
