@@ -1,15 +1,34 @@
 # Stray-Animals-Website
 This is SIT CS546 team project repo.
 **Since the previous CS546 library is locked, a new repo is created to update further changes.**
-## News
-Updated UI for animal posts and volunteer posts.Fixed database storage error.
-04/19/2024 by Chunzhi Li
 
 ## Instruction
 {Project Name: Stray Animal Information Application}
 
-## Images
-![image](https://github.com/LancyLi0211/Stray-Animals-Website/assets/77958415/f19a0e3c-29e9-432c-8b3b-028ecaab00fd)
+## Demo
+### Home Page
+![image](./Demo/Home_Page.png)
+
+### Login Page
+![image](./Demo/Login_Page.png)
+
+### Login Successful Page
+![image](./Demo/Login_Successful.png)
+
+### User Center Page
+![image](./Demo/User_Center.png)
+
+### Upload New Animal Page
+![image](./Demo/Upload_New_Animal_Page.png)
+
+### Upload New Volunteer Page
+![image](./Demo/Upload_New_Volunteer_Page.png)
+
+### Volunteer Info Page
+![image](./Demo/Volunteer_Info_Page.png)
+
+### Display Stray Animals on Map Page
+![image](./Demo/Display_Map_Page.png)
 
 
 ### Group members：
