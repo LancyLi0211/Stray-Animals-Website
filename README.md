@@ -31,7 +31,7 @@ This is SIT CS546 team project repo.
 ![image](./Demo/Display_Map_Page.png)
 
 
-### Group members：
+## Group members：
 
 - Youlin Chen
 - Chunzhi Li
@@ -41,9 +41,9 @@ This is SIT CS546 team project repo.
 
 NOTION: seed.js may take about ten seconds to run, please be patient
 
-### Installation/How To Run
+## Installation/How To Run
 
-#### Dependencies
+### Dependencies
 
 Before downloading this program, you'll need to install the following items to your computer:
 
